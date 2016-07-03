@@ -109,9 +109,4 @@ export const SPEAKER_LIST = [
     talkTitle: '',
     talkType: '', bio: '',
   },
-  { name: 'Not Found',
-    image: require('./assets/not-found.png'),
-    talkTitle: '',
-    talkType: '', bio: '',
-  },
 ];

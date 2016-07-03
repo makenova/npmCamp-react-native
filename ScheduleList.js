@@ -1,31 +1,31 @@
 import React, { Component } from 'react';
 import { ListView, StyleSheet, View } from 'react-native';
-import NavigationBar from 'react-native-navbar';
-import { ScheduleListItem } from './SpeakersListItem';
+import { ScheduleListItem } from './ScheduleListItem';
 import { SCHEDULE_LIST } from './schedule.db';
-import { SPEAKER_LIST } from './speakers.db';
 import { colors } from './constants';
 
 const styles = StyleSheet.create({
   scheduleContainer: {
     flex: 1,
+    paddingTop: 60,
     backgroundColor: colors.charcoal,
   },
   navigationBar: {
     backgroundColor: colors.red,
   },
   scheduleListContainer: {
-    alignItems: 'center',
     marginBottom: 10,
   },
 });
 
 export class ScheduleList extends Component {
   constructor(props) {
+    super(props);
+
     const ds = new ListView.DataSource({
       rowHasChanged: (r1, r2) => r1 !== r2,
     });
-    super(props);
+
     this.state = {
       dataSource: ds.cloneWithRows(SCHEDULE_LIST),
     };
@@ -41,11 +41,8 @@ export class ScheduleList extends Component {
   render() {
     return (
       <View style={styles.scheduleContainer}>
-        <NavigationBar
-          title={{ title: 'Schedule', tintColor: colors.white }}
-          style={styles.navigationBar}
-        />
         <ListView
+          showsVerticalScrollIndicator={false}
           contentContainerStyle={styles.scheduleListContainer}
           dataSource={this.state.dataSource}
           renderRow={this.renderRow}

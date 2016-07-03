@@ -1,12 +1,12 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import NavigationBar from 'react-native-navbar';
 import { colors } from './constants';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.charcoal,
+    paddingTop: 60,
   },
   navigationBar: {
     backgroundColor: colors.red,
@@ -25,19 +25,10 @@ const styles = StyleSheet.create({
   },
 });
 
-export const Schedule = ({ item, navigator }) =>
+export const Schedule = ({ item }) =>
   <View style={styles.container}>
-    <NavigationBar
-      title={{ title: item.name, tintColor: colors.white }}
-      style={styles.navigationBar}
-      leftButton={{
-        title: 'Back',
-        tintColor: colors.yellow,
-        handler: navigator.pop,
-      }}
-    />
     <View style={styles.scheduleItemContainer}>
-      <Text style={styles.scheduleDescription}>About {item.name}</Text>
+      <Text style={styles.scheduleDescription}>{item.title}</Text>
     </View>
   </View>;
 

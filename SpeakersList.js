@@ -45,6 +45,7 @@ export class SpeakersList extends Component {
           style={styles.navigationBar}
         />
         <ListView
+          showsVerticalScrollIndicator={false}
           contentContainerStyle={styles.speakersListContainer}
           dataSource={this.state.dataSource}
           renderRow={this.renderRow}
