@@ -1,6 +1,7 @@
 import React from 'react';
 import { TouchableOpacity, View, StyleSheet, Text } from 'react-native';
 import { colors } from './constants';
+import { SPEAKER_LIST } from './speakers.db';
 
 const styles = StyleSheet.create({
   scheduleListItemContainer: {
@@ -25,10 +26,28 @@ const styles = StyleSheet.create({
 
 export const ScheduleListItem = ({ item, navigator }) => {
   function renderScheduleItem(scheduleItem) {
-    navigator.push({
-      sceneTitle: 'schedule',
-      item: scheduleItem,
-    });
+    const speakerArray = SPEAKER_LIST.filter(
+      speaker => scheduleItem.speakers.some(
+        scheduleSpeaker => scheduleSpeaker === speaker.name
+      )
+    );
+
+    switch (speakerArray.length) {
+      case 0:
+        break;
+      case 1:
+        navigator.push({
+          sceneTitle: 'speaker',
+          speaker: speakerArray[0],
+        });
+        break;
+      default:
+        navigator.push({
+          sceneTitle: 'schedule',
+          item: scheduleItem,
+        });
+        break;
+    }
   }
 
   function renderSpeakers(speakers) {

@@ -29,6 +29,7 @@ export const Schedule = ({ item }) =>
   <View style={styles.container}>
     <View style={styles.scheduleItemContainer}>
       <Text style={styles.scheduleDescription}>{item.title}</Text>
+      {item.speakers.map(speaker => <Text key={speaker}>{speaker}</Text>)}
     </View>
   </View>;
 
