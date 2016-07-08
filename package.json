@@ -1,5 +1,5 @@
 {
-  "name": "npm-camp-react-native",
+  "name": "npmCampReactNative",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -9,9 +9,10 @@
     "dev": "react-native run ios; react-native run android"
   },
   "dependencies": {
-    "react": "15.1.0",
-    "react-native": "0.28.0",
+    "react": "^15.2.0",
+    "react-native": "^0.29.0",
     "react-native-navbar": "^1.5.0",
+    "react-native-navigation": "^1.0.24",
     "react-native-vector-icons": "^2.0.3"
   },
   "devDependencies": {
