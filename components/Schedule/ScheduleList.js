@@ -10,9 +10,6 @@ const styles = StyleSheet.create({
     paddingTop: 60,
     backgroundColor: colors.charcoal,
   },
-  navigationBar: {
-    backgroundColor: colors.red,
-  },
   scheduleListContainer: {
     marginBottom: 10,
   },

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { ListView, StyleSheet, View } from 'react-native';
-import NavigationBar from 'react-native-navbar';
 import { SpeakersListItem } from './SpeakersListItem';
 import { SPEAKER_LIST } from '../../speakers.db';
 import { colors } from '../../constants';
@@ -10,12 +9,11 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.charcoal,
   },
-  navigationBar: {
-    backgroundColor: colors.red,
-  },
   speakersListContainer: {
+    marginTop: 60,
     alignItems: 'center',
-    marginBottom: 10,
+    paddingTop: 20,
+    paddingBottom: 40,
   },
 });
 
@@ -40,10 +38,6 @@ export class SpeakersList extends Component {
   render() {
     return (
       <View style={styles.speakersContainer}>
-        <NavigationBar
-          title={{ title: 'Speakers', tintColor: colors.white }}
-          style={styles.navigationBar}
-        />
         <ListView
           showsVerticalScrollIndicator={false}
           contentContainerStyle={styles.speakersListContainer}
