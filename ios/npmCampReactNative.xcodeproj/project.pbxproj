@@ -24,6 +24,8 @@
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		37BA03D5C16346BCBCAF3778 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF483D22FB98477380FC41EF /* Entypo.ttf */; };
+		3F6A7ADE1D30A5CD003EC903 /* npm.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F6A7ADD1D30A5CD003EC903 /* npm.png */; };
+		3F6A7AEB1D30A66D003EC903 /* sparkles.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F6A7AEA1D30A66D003EC903 /* sparkles.png */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		835DB3DEC5284F2D801B9925 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8D3B612E82E4C839FB41AD0 /* FontAwesome.ttf */; };
 		84856B8367EF47C0A45AC9BE /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEF96BA8D9ED4EB991A0C86B /* Zocial.ttf */; };
@@ -142,6 +144,8 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = npmCampReactNative/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		3E75C65456524621A2E0F20D /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
+		3F6A7ADD1D30A5CD003EC903 /* npm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = npm.png; path = ../../../../Desktop/npm.png; sourceTree = "<group>"; };
+		3F6A7AEA1D30A66D003EC903 /* sparkles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sparkles.png; path = ../../../../Desktop/sparkles.png; sourceTree = "<group>"; };
 		4D52A25DC3674A698584395D /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		77CDF5E141024CAE87343E88 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
@@ -291,6 +295,8 @@
 		569E9948025044CEBB9558E9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3F6A7AEA1D30A66D003EC903 /* sparkles.png */,
+				3F6A7ADD1D30A5CD003EC903 /* npm.png */,
 				EF483D22FB98477380FC41EF /* Entypo.ttf */,
 				9CA77A7FB26346F5A3659F1D /* EvilIcons.ttf */,
 				F8D3B612E82E4C839FB41AD0 /* FontAwesome.ttf */,
@@ -574,10 +580,12 @@
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				37BA03D5C16346BCBCAF3778 /* Entypo.ttf in Resources */,
 				8CA68CC66C6749A88E498028 /* EvilIcons.ttf in Resources */,
+				3F6A7AEB1D30A66D003EC903 /* sparkles.png in Resources */,
 				835DB3DEC5284F2D801B9925 /* FontAwesome.ttf in Resources */,
 				E163D315CF424BEA8733233F /* Foundation.ttf in Resources */,
 				D08585C61C654DEC9386BD43 /* Ionicons.ttf in Resources */,
 				11E008EE37264976AF98CA1B /* MaterialIcons.ttf in Resources */,
+				3F6A7ADE1D30A5CD003EC903 /* npm.png in Resources */,
 				E8AF4AEEEAB347C48CD7ED40 /* Octicons.ttf in Resources */,
 				84856B8367EF47C0A45AC9BE /* Zocial.ttf in Resources */,
 			);

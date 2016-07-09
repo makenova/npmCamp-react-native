@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { ListView, StyleSheet, View } from 'react-native';
 import { ScheduleListItem } from './ScheduleListItem';
-import { SCHEDULE_LIST } from './schedule.db';
-import { colors } from './constants';
+import { SCHEDULE_LIST } from '../../schedule.db';
+import { colors } from '../../constants';
 
 const styles = StyleSheet.create({
   scheduleContainer: {

@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { ListView, StyleSheet, View } from 'react-native';
 import NavigationBar from 'react-native-navbar';
 import { SpeakersListItem } from './SpeakersListItem';
-import { SPEAKER_LIST } from './speakers.db';
-import { colors } from './constants';
+import { SPEAKER_LIST } from '../../speakers.db';
+import { colors } from '../../constants';
 
 const styles = StyleSheet.create({
   speakersContainer: {
@@ -26,7 +26,7 @@ export class SpeakersList extends Component {
     });
     super(props);
     this.state = {
-      dataSource: ds.cloneWithRows(SPEAKER_LIST),
+      dataSource: ds.cloneWithRows(this.props.speakers || SPEAKER_LIST),
     };
     this.renderRow = this.renderRow.bind(this);
   }
@@ -57,4 +57,5 @@ export class SpeakersList extends Component {
 
 SpeakersList.propTypes = {
   navigator: React.PropTypes.object.isRequired,
+  speakers: React.PropTypes.array,
 };

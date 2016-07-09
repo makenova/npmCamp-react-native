@@ -1,7 +1,7 @@
 import React from 'react';
 import { TouchableOpacity, View, StyleSheet, Text } from 'react-native';
-import { colors } from './constants';
-import { SPEAKER_LIST } from './speakers.db';
+import { colors } from '../../constants';
+import { SPEAKER_LIST } from '../../speakers.db';
 
 const styles = StyleSheet.create({
   scheduleListItemContainer: {
@@ -43,8 +43,8 @@ export const ScheduleListItem = ({ item, navigator }) => {
         break;
       default:
         navigator.push({
-          sceneTitle: 'schedule',
-          item: scheduleItem,
+          sceneTitle: 'speakerList',
+          speakers: speakerArray,
         });
         break;
     }

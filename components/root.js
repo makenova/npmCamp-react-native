@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { TabBarIOS } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
-import { ScheduleNav } from './ScheduleNav';
-import { SpeakersNav } from './SpeakersNav';
-import { colors } from './constants';
+import { ScheduleNav } from './Schedule/ScheduleNav';
+import { SpeakersNav } from './Speakers/SpeakersNav';
+import { colors } from '../constants';
 
 export class npmCampReact extends Component {
   constructor(props) {

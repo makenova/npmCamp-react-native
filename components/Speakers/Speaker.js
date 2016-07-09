@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
 import NavigationBar from 'react-native-navbar';
-import { colors } from './constants';
+import { colors } from '../../constants';
 
 const styles = StyleSheet.create({
   container: {
@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
   },
   speakerBio: {
     color: colors.white,
+    fontSize: 20,
   },
 });
 
@@ -43,7 +44,7 @@ export const Speaker = ({ speaker, navigator }) =>
     />
     <View style={styles.speakerContainer}>
       <Image source={speaker.image} style={styles.speakerImage} />
-      <Text style={styles.speakerBio}>About {speaker.name}</Text>
+      <Text style={styles.speakerBio}>{speaker.name}</Text>
     </View>
   </View>;
 

@@ -8,8 +8,9 @@ import {
 } from 'react-native';
 import { ScheduleList } from './ScheduleList';
 import { Schedule } from './Schedule';
-import { Speaker } from './Speaker';
-import { colors } from './constants';
+import { Speaker } from '../Speakers/Speaker';
+import { SpeakersList } from '../Speakers/SpeakersList';
+import { colors } from '../../constants';
 
 const styles = StyleSheet.create({
   navBar: {
@@ -18,10 +19,8 @@ const styles = StyleSheet.create({
   navBarLeftButton: {
     marginLeft: 10,
     // increase touch target
-    paddingTop: 10,
-    paddingRight: 10,
-    paddingBottom: 10,
-    paddingLeft: 10,
+    paddingVertical: 10,
+    paddingHorizontal: 10,
   },
   navBarText: {
     fontWeight: 'bold',
@@ -37,6 +36,8 @@ export const ScheduleNav = () => {
         return <Speaker navigator={navigator} speaker={scene.speaker} />;
       case 'schedule':
         return <Schedule navigator={navigator} item={scene.item} />;
+      case 'speakerList':
+        return <SpeakersList navigator={navigator} speakers={scene.speakers} />;
       case 'scheduleList':
       default:
         return <ScheduleList navigator={navigator} />;
@@ -44,7 +45,7 @@ export const ScheduleNav = () => {
   }
 
   const NavigationBarRouteMapper = {
-    LeftButton: (route, navigator, index, navState) => {
+    LeftButton: (route, navigator, index) => {
       if (index === 0) return null;
       return (
         <TouchableOpacity onPress={navigator.pop} >
@@ -55,7 +56,7 @@ export const ScheduleNav = () => {
       );
     },
     RightButton: () => null,
-    Title: (route, navigator, index, navState) =>
+    Title: (route) =>
       <Text style={styles.navBarText}>{route.title}</Text>,
   };
 
