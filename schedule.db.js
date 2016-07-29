@@ -1,4 +1,4 @@
-export const SCHEDULE_LIST = [
+const SCHEDULE_LIST = [
   {
     start: '8:00am',
     end: '8:55am',
@@ -222,3 +222,5 @@ export const SCHEDULE_LIST = [
     speakers: ['Ben Coe', 'CJ Silverio'],
   },
 ];
+
+export default SCHEDULE_LIST;

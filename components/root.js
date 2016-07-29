@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { TabBarIOS } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
-import { ScheduleNav } from './Schedule/ScheduleNav';
-import { SpeakersNav } from './Speakers/SpeakersNav';
+import ScheduleContainer from './Schedule/ScheduleContainer';
+import SpeakersContainer from './Speakers/SpeakersContainer';
 import { colors } from '../constants';
 
 export class npmCampReact extends Component {
@@ -24,7 +24,7 @@ export class npmCampReact extends Component {
           selected={this.state.selectedTab === 'schedule'}
           onPress={() => this.setState({ selectedTab: 'schedule' })}
         >
-          <ScheduleNav />
+          <ScheduleContainer />
         </Icon.TabBarItemIOS>
         <Icon.TabBarItemIOS
           title="Speakers"
@@ -33,7 +33,7 @@ export class npmCampReact extends Component {
           selected={this.state.selectedTab === 'speakers'}
           onPress={() => this.setState({ selectedTab: 'speakers' })}
         >
-          <SpeakersNav />
+          <SpeakersContainer />
         </Icon.TabBarItemIOS>
       </TabBarIOS>
     );

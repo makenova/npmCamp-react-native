@@ -20,6 +20,7 @@ export const colors = {
   red: '#CB3837',
   white: 'white',
   gray: '#8C8585',
+  lightgray: '#DDDDDD',
   purple: '#AA8ED6',
   yellow: '#FCAB40',
   pink: '#EA596E',

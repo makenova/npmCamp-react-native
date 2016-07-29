@@ -1,4 +1,4 @@
-export const SPEAKER_LIST = [
+const SPEAKER_LIST = [
   { name: 'Iheanyi Ekechukwu',
     image: require('./assets/iheanyi-ekechukwu.jpg'),
     talkTitle: 'Ember.js, DevOps, and You: Lessons Learned From Building an Ember Addon',
@@ -110,3 +110,5 @@ export const SPEAKER_LIST = [
     talkType: '', bio: '',
   },
 ];
+
+export default SPEAKER_LIST;

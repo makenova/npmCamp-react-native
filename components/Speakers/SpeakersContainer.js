@@ -1,14 +1,13 @@
 import React from 'react';
 import {
   Navigator,
-  StyleSheet,
-  Text,
   TouchableOpacity,
+  StyleSheet,
   View,
+  Text,
 } from 'react-native';
-import { ScheduleList } from './ScheduleList';
-import { Speaker } from '../Speakers/Speaker';
-import { SpeakersList } from '../Speakers/SpeakersList';
+import SpeakersList from './SpeakersList';
+import Speaker from './Speaker';
 import { colors } from '../../constants';
 
 const styles = StyleSheet.create({
@@ -28,20 +27,19 @@ const styles = StyleSheet.create({
   },
 });
 
-export const ScheduleNav = () => {
+const SpeakersContainer = () => {
   function renderScene(scene, navigator) {
     switch (scene.sceneTitle) {
       case 'speaker':
         return <Speaker navigator={navigator} speaker={scene.speaker} />;
       case 'speakerList':
-        return <SpeakersList navigator={navigator} speakers={scene.speakers} />;
-      case 'scheduleList':
       default:
-        return <ScheduleList navigator={navigator} />;
+        return <SpeakersList navigator={navigator} />;
+
     }
   }
 
-  const NavigationBarRouteMapper = {
+  const NavBarRouteMapper = {
     LeftButton: (route, navigator, index) => {
       if (index === 0) return null;
       return (
@@ -61,13 +59,15 @@ export const ScheduleNav = () => {
     <Navigator
       navigationBar={
         <Navigator.NavigationBar
-          routeMapper={NavigationBarRouteMapper}
+          routeMapper={NavBarRouteMapper}
           style={styles.navBar}
         />
       }
       style={{ flex: 1 }}
-      initialRoute={{ title: 'Schedule', sceneTitle: 'scheduleList' }}
+      initialRoute={{ title: 'Speakers', sceneTitle: 'speakerList' }}
       renderScene={renderScene}
     />
   );
 };
+
+export default SpeakersContainer;

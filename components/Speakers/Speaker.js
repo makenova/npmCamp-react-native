@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export const Speaker = ({ speaker, navigator }) =>
+const Speaker = ({ speaker, navigator }) =>
   <View style={styles.container}>
     <View style={styles.speakerContainer}>
       <Image source={speaker.image} style={styles.speakerImage} />
@@ -37,3 +37,5 @@ Speaker.propTypes = {
   speaker: React.PropTypes.object.isRequired,
   navigator: React.PropTypes.object.isRequired,
 };
+
+export default Speaker;

@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { ListView, StyleSheet, View } from 'react-native';
-import { ScheduleListItem } from './ScheduleListItem';
-import { SCHEDULE_LIST } from '../../schedule.db';
+import ScheduleListItem from './ScheduleListItem';
+import SCHEDULE_LIST from '../../schedule.db';
 import { colors } from '../../constants';
 
 const styles = StyleSheet.create({
   scheduleContainer: {
     flex: 1,
     paddingTop: 60,
+    paddingBottom: 40,
     backgroundColor: colors.charcoal,
   },
   scheduleListContainer: {
@@ -15,7 +16,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export class ScheduleList extends Component {
+export default class ScheduleList extends Component {
   constructor(props) {
     super(props);
 

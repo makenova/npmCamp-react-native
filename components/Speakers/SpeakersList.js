@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { ListView, StyleSheet, View } from 'react-native';
-import { SpeakersListItem } from './SpeakersListItem';
-import { SPEAKER_LIST } from '../../speakers.db';
+import SpeakersListItem from './SpeakersListItem';
+import SPEAKER_LIST from '../../speakers.db';
 import { colors } from '../../constants';
 
 const styles = StyleSheet.create({
@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export class SpeakersList extends Component {
+export default class SpeakersList extends Component {
   constructor(props) {
     const ds = new ListView.DataSource({
       rowHasChanged: (r1, r2) => r1 !== r2,

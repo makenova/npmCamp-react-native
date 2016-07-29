@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export const SpeakersListItem = ({ item, navigator }) => {
+const SpeakersListItem = ({ item, navigator }) => {
   function renderSpeaker(speaker) {
     navigator.push({
       sceneTitle: 'speaker',
@@ -43,3 +43,5 @@ SpeakersListItem.propTypes = {
   item: React.PropTypes.object.isRequired,
   navigator: React.PropTypes.object.isRequired,
 };
+
+export default SpeakersListItem;
