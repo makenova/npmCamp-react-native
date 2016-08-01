@@ -30,11 +30,10 @@ const SpeakersListItem = ({ item, navigator }) => {
   return (
     <TouchableOpacity
       onPress={() => renderSpeaker(item)}
+      style={styles.speakerListItemContainer}
     >
-      <View style={styles.speakerListItemContainer}>
-        <Image style={styles.speakerImage} source={item.image} />
-        <Text style={styles.speakerName}>{item.name}</Text>
-      </View>
+      <Image style={styles.speakerImage} source={item.image} />
+      <Text style={styles.speakerName}>{item.name}</Text>
     </TouchableOpacity>
   );
 };

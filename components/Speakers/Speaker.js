@@ -1,18 +1,19 @@
 import React from 'react';
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { colors } from '../../constants';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.charcoal,
-    paddingTop: 60,
   },
-  speakerContainer: {
-    flexDirection: 'column',
+  scroll: {
+    marginTop: 60,
+    marginBottom: 40,
+    paddingTop: 20,
+    paddingBottom: 60,
     alignItems: 'center',
-    paddingTop: 10,
-    marginBottom: 10,
+    paddingVertical: 10,
   },
   speakerImage: {
     width: 250,
@@ -25,17 +26,16 @@ const styles = StyleSheet.create({
   },
 });
 
-const Speaker = ({ speaker, navigator }) =>
+const Speaker = ({ speaker }) =>
   <View style={styles.container}>
-    <View style={styles.speakerContainer}>
+    <ScrollView contentContainerStyle={styles.scroll}>
       <Image source={speaker.image} style={styles.speakerImage} />
       <Text style={styles.speakerBio}>{speaker.name}</Text>
-    </View>
+    </ScrollView>
   </View>;
 
 Speaker.propTypes = {
   speaker: React.PropTypes.object.isRequired,
-  navigator: React.PropTypes.object.isRequired,
 };
 
 export default Speaker;

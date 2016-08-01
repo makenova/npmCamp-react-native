@@ -7,8 +7,7 @@ import { colors } from '../../constants';
 const styles = StyleSheet.create({
   scheduleContainer: {
     flex: 1,
-    paddingTop: 60,
-    paddingBottom: 40,
+    marginTop: 60,
     backgroundColor: colors.charcoal,
   },
   scheduleListContainer: {
