@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableOpacity, View, Image, StyleSheet, Text } from 'react-native';
+import { TouchableOpacity, Image, StyleSheet, Text } from 'react-native';
 
 const styles = StyleSheet.create({
   speakerListItemContainer: {

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { ListView, StyleSheet, View } from 'react-native';
 import ScheduleListItem from './ScheduleListItem';
 import SCHEDULE_LIST from '../../schedule.db';
@@ -15,40 +15,31 @@ const styles = StyleSheet.create({
   },
 });
 
-export default class ScheduleList extends Component {
-  constructor(props) {
-    super(props);
+const ScheduleList = ({ navigator }) => {
+  const dataSource = new ListView.DataSource({
+    rowHasChanged: (r1, r2) => r1 !== r2,
+  });
 
-    const ds = new ListView.DataSource({
-      rowHasChanged: (r1, r2) => r1 !== r2,
-    });
-
-    this.state = {
-      dataSource: ds.cloneWithRows(SCHEDULE_LIST),
-    };
-    this.renderRow = this.renderRow.bind(this);
-  }
-
-  renderRow(item) {
+  function renderRow(item) {
     return (
-      <ScheduleListItem item={item} navigator={this.props.navigator} />
+      <ScheduleListItem item={item} navigator={navigator} />
     );
   }
 
-  render() {
-    return (
-      <View style={styles.scheduleContainer}>
-        <ListView
-          showsVerticalScrollIndicator={false}
-          contentContainerStyle={styles.scheduleListContainer}
-          dataSource={this.state.dataSource}
-          renderRow={this.renderRow}
-        />
-      </View>
-    );
-  }
-}
+  return (
+    <View style={styles.scheduleContainer}>
+      <ListView
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={styles.scheduleListContainer}
+        dataSource={dataSource.cloneWithRows(SCHEDULE_LIST)}
+        renderRow={renderRow}
+      />
+    </View>
+  );
+};
 
 ScheduleList.propTypes = {
   navigator: React.PropTypes.object.isRequired,
 };
+
+export default ScheduleList;
